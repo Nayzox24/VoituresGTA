@@ -17,6 +17,20 @@ class Program
 {
     static void Main(string[] args)
     {
+        string[] garage = { "Banshee", "Zentorno", "Sultan", "Sanchez", "Buzzard" };
+        for (int b = 0; b < garage.Length; b++)
+        {
+            Console.WriteLine((b + 1).ToString() +". "+ garage[b]);
+        }
+        Console.WriteLine("Saisisez le numéro du vehicule souhaiter remplacer");
+        int reponse = Convert.ToInt32(Console.ReadLine());
         
+        Console.WriteLine("Par quel autre vehicule voulez vous le remplacer donnez moi son nom");
+        string Reponse = Console.ReadLine();
+        garage[(reponse - 1)] = Reponse;
+        for (int i = 0; i < garage.Length; i++)
+        {
+            Console.WriteLine((i+ 1).ToString() + ". " + garage[i]);
+        }
     }
 }
